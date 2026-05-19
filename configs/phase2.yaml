@@ -1,0 +1,65 @@
+input_csv: <path/to/input.csv> 
+
+max_hint_rounds: <int>
+
+proposer:
+  provider: openai
+  model: <model-id>
+  tag: <tag>
+  temperature: <float>
+  top_p: <float>
+  max_output_tokens: <int>
+  reasoning_effort: <minimal|low|medium|high>
+  reasoning_summary: <auto|concise|detailed>
+  timeout: <float seconds>
+  max_retries: <int>
+
+checker:
+  provider: openai
+  model: <model-id>
+  tag: <tag>
+  temperature: <float>
+  top_p: <float>
+  max_output_tokens: <int>
+  reasoning_effort: <minimal|low|medium|high>
+  reasoning_summary: <auto|concise|detailed>
+  timeout: <float seconds>
+  max_retries: <int>
+
+experimenters:
+  <tag>:
+    provider: openai
+    model: <model-id>
+    tag: <tag>
+    temperature: <float>
+    top_p: <float>
+    max_output_tokens: <int>
+    reasoning_effort: <minimal|low|medium|high>
+    reasoning_summary: <auto|concise|detailed>
+    timeout: <float seconds>
+    max_retries: <int>
+
+  <tag-2>:
+    provider: anthropic
+    model: <model-id>
+    tag: <tag-2>
+    temperature: <float>
+    top_p: <float>
+    top_k: <int>
+    max_output_tokens: <int>
+    thinking: <enabled|disabled>
+    thinking_budget_tokens: <int>
+    timeout: <float seconds>
+    max_retries: <int>
+
+  <tag-3>:
+    provider: gemini
+    model: <model-id>
+    tag: <tag-3>
+    temperature: <float>
+    top_p: <float>
+    top_k: <int>
+    max_output_tokens: <int>
+    thinking_budget: <int>
+    timeout: <float seconds>
+    max_retries: <int>

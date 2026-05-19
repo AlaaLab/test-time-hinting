@@ -1,0 +1,15 @@
+pandas
+numpy
+pyyaml
+tqdm
+openai
+anthropic
+google-genai
+torch
+transformers
+datasets
+accelerate
+peft
+trl
+ms-swift
+Pillow

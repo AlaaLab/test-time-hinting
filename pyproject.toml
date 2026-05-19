@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "test-time-hinting"
+version = "0.1.0"
+description = "Test-Time Hinting: a black-box hint-generation pipeline for vision-language models (base sampling, agentic hint optimization, hint-generator SFT + GRPO)."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas",
+    "numpy",
+    "pyyaml",
+    "tqdm",
+    "openai",
+    "anthropic",
+    "google-genai",
+    "torch",
+    "transformers",
+    "datasets",
+    "accelerate",
+    "peft",
+    "trl",
+    "ms-swift",
+    "Pillow",
+]
+
+[project.scripts]
+tth-phase1 = "tth.phase1:main"
+tth-phase2 = "tth.phase2:main"
+tth-phase3a = "tth.phase3a:main"
+tth-phase3b = "tth.phase3b:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
